@@ -18,6 +18,15 @@ def get_players_by_league(request, league_id):
     except League.DoesNotExist:
         return Response({"error": "League not found"}, status=404)
 
+@api_view(['GET'])
+def get_league_by_id(request, league_id):
+    try:
+        league = League.objects.get(LeagueID=league_id)
+        serializer = LeagueSerializer(league)
+        return Response(serializer.data)
+    except League.DoesNotExist:
+        return Response({"error": "League not found"}, status=404)
+
 @api_view(['POST'])
 def add_league(request):
     serializer = LeagueSerializer(data=request.data)
