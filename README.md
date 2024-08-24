@@ -24,9 +24,11 @@ Welcome to the Movie Fantasy League project! This application allows users to cr
    git clone https://github.com/randyd55/movie-league.git
    cd movie-league/backend/django/movieleague
 
-2. **Install Dependencies and run**
+2. **Install Dependencies, populate database and run**
     ```bash
    pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py populate_db
    python manage.py runserver
 
 
