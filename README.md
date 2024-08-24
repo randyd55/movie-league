@@ -21,9 +21,21 @@ Welcome to the Movie Fantasy League project! This application allows users to cr
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/movie-fantasy-league.git
-   cd movie-fantasy-league
+   git clone https://github.com/randyd55/movie-league.git
+   cd movie-league/backend/django/movieleague
 
-2. ** Install Dependencies**
+2. **Install Dependencies and run**
     ```bash
    pip install -r requirements.txt
+   python manage.py runserver
+
+
+### Frontend Setup
+
+1. **Install Dependencies and run**
+  ```bash
+   cd frontend/movie-league
+   npm install
+   npm start
+```
+2. **Navigate to http://localhost:3000 in your web browser**
